@@ -4,7 +4,9 @@
         "psr-4": {
             "Source\\": "src/"
         },
-        "files": []
+        "files": [
+            "source/Boot/Config.php"
+          ]
     },
     "authors": [
         {
@@ -16,6 +18,7 @@
         "vendor-dir": "vendor"
     },
     "require": {
-        "guzzlehttp/guzzle": "^7.5"
+        "guzzlehttp/guzzle": "^7.5",
+        "pecee/simple-router": "4.3.7.2"
     }
 }
