@@ -5,7 +5,7 @@
             "Source\\": "src/"
         },
         "files": [
-            "source/Boot/Config.php"
+            "src/routes/routes.php"
           ]
     },
     "authors": [
