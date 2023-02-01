@@ -1,0 +1,21 @@
+{
+    "name": "marcus-graciano/jueri-ecommerce",
+    "autoload": {
+        "psr-4": {
+            "Source\\": "src/"
+        },
+        "files": []
+    },
+    "authors": [
+        {
+            "name": "Marcus Vinicius Graciano",
+            "email": "marcusgraciano.ads@gmail.com"
+        }
+    ],
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.5"
+    }
+}
