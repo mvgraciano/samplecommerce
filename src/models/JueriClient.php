@@ -25,7 +25,7 @@ class JueriClient {
         ]);
     }
 
-    public function listProducts()
+    public function listProducts(): array|object
     {
         $response = $this->http->get(
             "{$this->apiUrlBase}/{$this->clientCode}/produto",
@@ -40,6 +40,6 @@ class JueriClient {
         );
 
         $data = json_decode($response->getBody());
-        return $data;
+        return $data->data;
     }
 }

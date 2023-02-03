@@ -4,7 +4,7 @@ namespace Source\Core;
 
 final class Environment
 {
-    public static function load($dir)
+    public static function load(string $dir): bool
     {
         if (!file_exists($dir . '/.env'))
             return false;

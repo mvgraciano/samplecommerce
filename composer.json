@@ -5,7 +5,10 @@
             "Source\\": "src/"
         },
         "files": [
-            "src/routes/routes.php"
+            "src/core/config.php",
+            "src/core/helpers.php",
+            "src/routes/routes.php",
+            "vendor/pecee/simple-router/helpers.php"
           ]
     },
     "authors": [
@@ -19,6 +22,7 @@
     },
     "require": {
         "guzzlehttp/guzzle": "^7.5",
-        "pecee/simple-router": "4.3.7.2"
+        "pecee/simple-router": "4.3.7.2",
+        "league/plates": "^3.5"
     }
 }
