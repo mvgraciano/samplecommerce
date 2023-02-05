@@ -6,13 +6,9 @@ use Pecee\SimpleRouter\SimpleRouter;
 use Source\Controllers\EcommerceController;
 use Source\Controllers\ErrorController;
 
-\Source\Core\Environment::load(__DIR__ . '/../../');
-
-define("BASE_URL", "/" . getenv("APP_NAME"));
-
 SimpleRouter::get('/', [EcommerceController::class, 'home']);
 
-SimpleRouter::group(['prefix' => BASE_URL], function () {
+SimpleRouter::group(['prefix' => CONF_URL_BASE], function () {
 
     // Web routes
     SimpleRouter::get('/', [EcommerceController::class, 'home']);
@@ -28,10 +24,10 @@ SimpleRouter::error(function(Request $request, \Exception $exception) {
     switch($exception->getCode()) {
         // Page not found
         case 404:
-            response()->redirect(BASE_URL . "/not-found");
+            response()->redirect(CONF_URL_BASE . "/not-found");
         // Forbidden
         case 403:
-            response()->redirect(BASE_URL . "/forbidden");
+            response()->redirect(CONF_URL_BASE . "/forbidden");
     }
     
 });
