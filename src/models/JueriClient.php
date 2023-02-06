@@ -25,17 +25,31 @@ class JueriClient {
         ]);
     }
 
-    public function listProducts(): array|object
+    public function listProducts($search = ''): array|object
     {
         $response = $this->http->get(
             "{$this->apiUrlBase}/{$this->clientCode}/produto",
             [
                 'headers' => $this->requestHeader,
                 'query' => [
-                    'search'=> '',
+                    'search'=> $search,
                     'page'=> '',
-                    'per_page'=> '',
+                    'per_page'=> ''
                 ],
+            ]
+        );
+
+        $data = json_decode($response->getBody());
+        return $data->data;
+    }
+
+    public function checkout(array $sale)
+    {
+        $response = $this->http->post(
+            "{$this->apiUrlBase}/{$this->clientCode}/venda",
+            [
+                'headers' => $this->requestHeader,
+                'body' => json_encode($sale),
             ]
         );
 

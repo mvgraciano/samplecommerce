@@ -5,7 +5,7 @@
         <div class="row py-2">
             <h2>Produtos</h2>
         </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4 p-4 mb-5">
+        <div id="divProductsList" class="row row-cols-1 row-cols-md-3 g-4 p-4 mb-5">
             <?php foreach ($products as $product) :
                 $hasPrice = !empty($product->tipo_preco);
             ?>

@@ -11,7 +11,10 @@ SimpleRouter::get('/', [EcommerceController::class, 'home']);
 SimpleRouter::group(['prefix' => CONF_URL_BASE], function () {
 
     // Web routes
-    SimpleRouter::get('/', [EcommerceController::class, 'home']);
+    SimpleRouter::get('/',          [EcommerceController::class, 'home']);
+    SimpleRouter::get('/products',  [EcommerceController::class, 'getProducts']);
+    SimpleRouter::get('/caixinha',  [EcommerceController::class, 'checkoutPage']);
+    SimpleRouter::post('/checkout', [EcommerceController::class, 'checkout']);
 
     // Error routes
     SimpleRouter::get('/not-found', [ErrorController::class, 'notFound']);

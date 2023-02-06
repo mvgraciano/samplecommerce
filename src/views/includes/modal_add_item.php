@@ -18,6 +18,12 @@
                         <span id="modalProductRef"></span>
                     </div>
                 </div>
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <label class="fw-bold">Cód. barras:</label>
+                        <span id="modalProductBarCode"></span>
+                    </div>
+                </div>
                 <div class="row my-3">
                     <div class="col-md-12">
                         <label class="fw-bold">Preço:</label>
@@ -40,6 +46,7 @@
                         <label for="quantity" class=" col-form-label">Quantidade</label>
                         <div class="flex-grow-1">
                             <input type="text" class="form-control" id="quantity" value="0">
+                            <div id="divErrorQuantity" class="div-error text-danger d-none">Informe a quantidade desejada</div>
                         </div>
                     </div>
                 </form>

@@ -10,7 +10,6 @@ class ErrorController {
     }
 
     public function notFound() {
-        var_dump("ERRO!");
-        exit;
+        return '<h1>OPS! Página não encontrada!</h1>';
     }
 }
